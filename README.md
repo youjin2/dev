@@ -1,1 +1,1 @@
-# some trouble-shootings for development
+# Some trouble-shootings and templates
