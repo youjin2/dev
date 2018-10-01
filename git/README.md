@@ -24,3 +24,21 @@ $ git reset my_file
   # remains at stashed list
   $ git stash apply stash@{N}
   ```
+
+* git branch
+  - create origin branch
+  ``` bash
+  # create new local branch
+  $ git checkout -b my_branch
+  # create new remote branch
+  $ git push origin my_branch
+  ```
+  - delete origin brach
+  ``` bash
+  # checkout for delete
+  $ git checkout another_branch
+  # remove local branch
+  $ git branch -D my_branch
+  # remove remote branch
+  $ git push origin :my_branch
+  ```
