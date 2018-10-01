@@ -1,8 +1,13 @@
 # Git Commands
-* cancel `git add my_file`  
-``` bash
-$ git reset my_file
-```
+* git add
+  - add new file
+  ``` bash
+  $ git add my_file
+  ```
+  - revert added file
+  ``` bash
+  $ git reset my_file
+  ```
 
 * git stash (untracked or modifed files)  
   - apply stash 
