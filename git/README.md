@@ -8,6 +8,21 @@
   ``` bash
   $ git reset my_file
   ```
+* git commit
+  - commit 
+  - revert commit
+    - soft: preserve index (added, staged)
+    - mixed: cancel index (unadded, staged)
+    - hard: cancel inedx (unadded, unstaged)
+    - example
+    ``` bash
+    # show comit log
+    $ git log
+    # cancel only previous commit (added, staged)
+    $ git reset --soft HEAD^
+    # cancel last 2 previous commit (unadded, staged)
+    $ git reset --mixed HEAD~2
+    ```
 
 * git stash (untracked or modifed files)  
   - apply stash 
