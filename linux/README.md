@@ -1,6 +1,6 @@
 # Linux commands
 * chown
-  - change group permission
+  - Change group permission
   ``` bash
   $ chown {owner}:{group} {file_or_directory}
   # recursive for sub directories
@@ -16,3 +16,10 @@
     # add space and %U as below and save
     # Exec=/opt/google/chrome/chrome %U
     ```
+
+* VirtualBox
+    - Change Booting order
+        - settings -> system -> motherboard -> booting order
+            - Floppy Disk
+            - Hard Disk
+            - Optical Disk
