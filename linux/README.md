@@ -23,3 +23,9 @@
             - Floppy Disk
             - Hard Disk
             - Optical Disk
+    - Set network drive  
+    (ref: http://song2song2.tistory.com/entry/VirtualBoxnetprint)
+        - Devices -> Network -> Network Settings
+            - change "Attached to" to "Bridged Adaptor"
+        - Devices -> Network -> Connect Network Adaptor
+        - Add network printer again
