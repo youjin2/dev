@@ -29,3 +29,35 @@
             - change "Attached to" to "Bridged Adaptor"
         - Devices -> Network -> Connect Network Adaptor
         - Add network printer again
+
+* Bluetooth
+    - Connect MS designer mouse on Ubuntu 16.04  
+    (ref: https://askubuntu.com/questions/835652/bluetooth-keyboard-paired-but-not-responding-16-04?rq=1)
+        - Step 1:
+        ``` bash
+        $ sudo apt-get install bluez blueman
+        ```
+        - Step 2:
+        ``` bash
+        $ sudo nano /etc/bluetooth/main.conf
+            - Change line 67, uncomment #[Policy] so that it reads [Policy] 
+            - Change line 89, uncomment and change #AutoEnable=false so that it reads
+            - set AutoEnable=true
+        ```
+        - Step 3:
+        ``` bash
+        $ sudo nano /lib/udev/rules.d/50-bluetooth-hci-auto-poweron.rules
+            - Change line 1 to comment out:
+            - #ACTION=="add", SUBSYSTEM=="bluetooth", KERNEL=="hci[0-9]*", RUN+="/bin/hciconfig %k up"
+            - it seems that i have to comment out both of line 1 and 2
+        ```
+        - Step 4:
+            - Save and Reboot
+        - Step 5:
+            - From the second (blueman) bluetooth icon on the top menu bar, choose "Local Services"
+              then under "Pan support" choose "blueman (dhclient)". Click Apply or don't worry if it
+              isn't enabled, you can just close the window.
+        - Step 6:
+            - Choose "Setup New Device" from the same window. Press the pairing button on the mouse,
+              so the blue lights start flashing (it's a really small button that I missed at first).
+              Complete the wizard, and your mouse should be paired.
