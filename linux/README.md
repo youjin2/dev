@@ -61,3 +61,13 @@
             - Choose "Setup New Device" from the same window. Press the pairing button on the mouse,
               so the blue lights start flashing (it's a really small button that I missed at first).
               Complete the wizard, and your mouse should be paired.
+    - Cannot find download directory
+        - If you have a following message after booting your system
+        ___
+        Please make sure that **/home/user/my_directory/** directory exists or configure it with blueman-services
+        - Go to `org -> blueman -> transfers`
+        ___
+        ```
+        $ dconf-editor
+        ```
+        - Edit `shared path` to appropriate directory
