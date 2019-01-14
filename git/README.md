@@ -13,7 +13,7 @@
   - revert commit
     - soft: preserve index (added, staged)
     - mixed: cancel index (unadded, staged)
-    - hard: cancel inedx (unadded, unstaged)
+    - hard: cancel index (unadded, unstaged)
     - example
     ``` bash
     # show comit log
@@ -23,6 +23,15 @@
     # cancel last 2 previous commit (unadded, staged)
     $ git reset --mixed HEAD~2
     ```
+  - show commit log
+  ``` bash
+  # not pushed log
+  $ git log --branches --not --remotes
+  # all previous log
+  $ git log
+  # show only commit message
+  $ git log --oneline --graph --decorate
+  ```
 
 * git stash (untracked or modifed files)  
   - apply stash 
