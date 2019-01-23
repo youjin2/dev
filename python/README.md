@@ -180,7 +180,7 @@
             $ sudo pip install tensorflow*.whl
             ```
 
-* Install tensorflow-gpu (**install using this guidelines**)
+* Install tensorflow-gpu (**following this guidelines**)
     ``` bash
     ### steps ####
     # verify the system has a cuda-capable gpu
