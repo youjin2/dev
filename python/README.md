@@ -244,23 +244,55 @@
     # finally, to verify the installation, check
     $ nvidia-smi
     $ nvcc -V
+    
+    # test everything worked by opening a new python interpreter with python and running the following commands
+    $ python
+    >>> from tensorflow.python.client import device_lib
+    >>> device_lib.list_local_devices()
+    
+    # you can see if tensorflow-gpu installed appropriately
+    -----------------
+    [{
+    name: "/device:CPU:0",
+    device_type: "CPU",
+    memory_limit: 268435456,
+    locality {},
+    incarnation: 12584189039274141042
+    },{
+        name: "/device:GPU:0",
+        device_type: "GPU",
+        memory_limit: 3252486144,
+        locality {
+          bus_id: 1,
+          links {}
+        },
+        incarnation: 16344452236433767630, 
+        physical_device_desc: "device: 0, name: GeForce GTX 1050, pci bus id: 0000:01:00.0, compute capability: 6.1"
+    ]
+    -----------------
     ```
 
 * Conflicts between ipython and ptpython
-    - Related to the version of prompt-toolkit
+    - If you have indenation problems in ipython kernel
         ``` bash
-        $ pip install ptpython
-        $ pip install --upgrade ipython
+         $ pip install prompt-toolkit==1.0.14
+         $ pip install ptpython==0.36
         ```
-    - If you have problems with autocompletion in jupyter notebook
-        ``` bash
-        $ pip install --upgrade jupyter
-        ```
-    - If you have following error message `socket.gaierror: [Errno -2] Name or service not known`
-        ``` bash
-        # go to jupyter settings
-        $ cd ~/.jupyter
-        $ vim jupyter_notebook_config.py
+    - Currently not compatible with ipython indentation
+        - Related to the version of prompt-toolkit
+            ``` bash
+            $ pip install ptpython
+            $ pip install --upgrade ipython
+            ```
+        - If you have problems with autocompletion in jupyter notebook
+            ``` bash
+            $ pip install --upgrade jupyter
+            ```
+        - If you have following error message `socket.gaierror: [Errno -2] Name or service not known`
+            ``` bash
+            # go to jupyter settings
+            $ cd ~/.jupyter
+            $ vim jupyter_notebook_config.py
 
-        # change c.NotebookApp.ip = '*' to c.NotebookApp.ip = '0.0.0.0'
+            # change c.NotebookApp.ip = '*' to c.NotebookApp.ip = '0.0.0.0'
         ```
