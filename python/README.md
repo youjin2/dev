@@ -278,7 +278,7 @@
          $ pip install prompt-toolkit==1.0.14
          $ pip install ptpython==0.36
         ```
-    - Currently not compatible with ipython indentation
+    - Currently not compatible with ipython indentation (**Not working**)
         - Related to the version of prompt-toolkit
             ``` bash
             $ pip install ptpython
