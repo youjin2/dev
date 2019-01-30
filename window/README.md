@@ -11,3 +11,6 @@
     - go to  
     `C:\Users\ygene\AppData\Local\Microsoft\Windows\INetCache\Content.MSO`
     - delte all temp files
+
+* Window storage proportion  
+(https://motivation.tistory.com/610)
