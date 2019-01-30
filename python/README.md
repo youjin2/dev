@@ -229,10 +229,10 @@
     $ echo 'export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
     $ source ~/.bashrc
 
-    # install cuDNN v7.2
+    # install cuDNN v7.3.0 for CUDA9.0 support
     # in order to download cuDNN you have to regeistered here https://developer.nvidia.com/developer-program/signup
-    # then download cuDNN v7.2 form https://developer.nvidia.com/cudnn
-    $ CUDNN_TAR_FILE="cudnn-9.0-linux-x64-v7.2.1.38"
+    # then download cuDNN v7.3.0 form https://developer.nvidia.com/cudnn
+    $ CUDNN_TAR_FILE="cudnn-9.0-linux-x64-v7.3.0.29.tgz"
     $ wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.2.1/prod/9.0_20180806/${CUDNN_TAR_FILE}
     $ tar -xzvf ${CUDNN_TAR_FILE}
 
