@@ -75,3 +75,8 @@
 * wget
     - Ignore requiring --no-check-certificate option
         - add `check-certificate=off` to `~/.wgetrc`
+
+* fzf
+    - useful commands
+        - history search: `ctrl + r`
+        - vim command mode: `:FZF ~/search_directory`
