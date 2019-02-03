@@ -71,3 +71,7 @@
             $ dconf-editor
             ```
         - Edit `shared path` to appropriate directory
+        
+* wget
+    - Ignore requiring --no-check-certificate option
+        - add `check-certificate=off` to `~/.wgetrc`
