@@ -80,3 +80,13 @@
     - useful commands
         - history search: `ctrl + r`
         - vim command mode: `:FZF ~/search_directory`
+
+* User/Group
+    - add new user
+        ``` bash
+        $ sudo adduser user
+        ```        
+    - add existing user to exiting group
+        ``` bash
+        $ sudo usermod -a -G group user
+        ```
