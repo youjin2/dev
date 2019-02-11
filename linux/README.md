@@ -84,9 +84,9 @@
 * User/Group
     - add new user
         ``` bash
-        $ sudo adduser $user
+        $ sudo adduser "user"
         ```        
     - add existing user to exiting group
         ``` bash
-        $ sudo usermod -a -G $group $user
+        $ sudo usermod -a -G "group" "user"
         ```
