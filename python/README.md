@@ -180,7 +180,7 @@
             $ sudo pip install tensorflow*.whl
             ```
 
-* Install tensorflow-gpu (**following this guidelines**)
+* Install tensorflow-gpu (**follow this guideline**)
     ``` bash
     ### steps ####
     # verify the system has a cuda-capable gpu
@@ -273,7 +273,7 @@
     ```
 
 * Conflicts between ipython and ptpython
-    - If you have indenation problems in ipython kernel
+    - If you have indenation problems in ipython kernel (**follow this guideline**)
         ``` bash
          $ pip install prompt-toolkit==1.0.14
          $ pip install ptpython==0.36
