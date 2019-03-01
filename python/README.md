@@ -240,12 +240,16 @@
     $ sudo cp -P cuda/include/cudnn.h /usr/local/cuda-9.0/include
     $ sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda-9.0/lib64/
     $ sudo chmod a+r /usr/local/cuda-9.0/lib64/libcudnn*
+    
+    # failed call to cuInit: CUDA_ERROR_UNKNOWN
+    $ sudo apt install nvidia-modprobe
 
     # finally, to verify the installation, check
     $ nvidia-smi
     $ nvcc -V
     
     # test everything worked by opening a new python interpreter with python and running the following commands
+    $ pip install tensorflow-gpu==1.12
     $ python
     >>> from tensorflow.python.client import device_lib
     >>> device_lib.list_local_devices()
