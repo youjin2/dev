@@ -83,3 +83,18 @@
         # rename remote branch (delete original branch)
         $ git push origin :old_branch_name new_branch_name
         ```
+
+* git global settings
+    - set default rebase editor
+        ``` bash
+        $ git config --global core.editor "vim"
+        ```
+    - set default mergetool editor
+        ``` bash
+        $ git config --global merge.tool vimdiff
+        ```
+    - set default user
+        ``` bash
+        $ git config --global user.email "my_email_address"
+        $ git config --global user.name "my_name"
+        ```
