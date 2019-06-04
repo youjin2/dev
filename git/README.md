@@ -96,5 +96,9 @@
     - set default user
         ``` bash
         $ git config --global user.email "my_email_address"
-        $ git config --global user.name "my_name"
+        $ git config --global user.name "my_name"        
+        ```
+    - save global credential
+        ``` bash
+        $ git config --global credential.helper store
         ```
