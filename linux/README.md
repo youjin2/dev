@@ -90,3 +90,9 @@
         ``` bash
         $ sudo usermod -a -G "group" "user"
         ```
+
+* about ssl certificate problem on ubnutu 18.04
+    ``` bash
+    $ sudo update-ca-certificates --fresh
+    $ export SSL_CERT_DIR=/etc/ssl/certs
+    ```
